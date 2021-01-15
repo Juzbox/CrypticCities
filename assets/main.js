@@ -5,9 +5,12 @@ let col1 = [];
 let col2 = [];
 let col3 = [];
 let col4 = [];
+
 var word1;
 var word2;
 var word3;
+var word4;
+
 var s;
 
 function preload() {
@@ -32,10 +35,13 @@ function setup() {
     if(data.getString(i, 3) != "") {
       col4[i] = data.getString(i, 3);//method
     }
+      
+
   }
   word1 = random(col1) + " " + random(col3);
   word2 = random(col4);
   word3 = random(col2);
+
 }
 
 function draw() {
@@ -67,28 +73,28 @@ function Type1() {
   }
 }
 
-function Delete1() {
-  var text1 =  word1.substring(0, _PART_INDEX_X - 1);
-  document.getElementsByClassName('x1')[0].innerHTML = text1;
-  _PART_INDEX_X--;
-
-  if(text1 === '') {
-    word1 = random(col1)+" "+random(col3);
-
-    clearInterval(_INTERVAL_VAL_X);
-
-    if(_PARTX == (word1.length - 1))
-    _PARTX = 0;
-    else
-    _PARTX++;
-
-    _PART_INDEX_X = 0;
-
-    setTimeout(function() {
-      _INTERVAL_VAL_X = setInterval(Type1, 100);
-    }, 200);
-  }
-}
+//function Delete1() {
+//  var text1 =  word1.substring(0, _PART_INDEX_X - 1);
+//  document.getElementsByClassName('x1')[0].innerHTML = text1;
+//  _PART_INDEX_X--;
+//
+//  if(text1 === '') {
+//    word1 = random(col1)+" "+random(col3);
+//
+//    clearInterval(_INTERVAL_VAL_X);
+//
+//    if(_PARTX == (word1.length - 1))
+//    _PARTX = 0;
+//    else
+//    _PARTX++;
+//
+//    _PART_INDEX_X = 0;
+//
+//    setTimeout(function() {
+//      _INTERVAL_VAL_X = setInterval(Type1, 100);
+//    }, 200);
+//  }
+//}
 
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -105,28 +111,28 @@ function Type2() {
   }
 }
 
-function Delete2() {
-  var text2 =  word2.substring(0, _PART_INDEX - 1);
-  document.getElementsByClassName('y1')[0].innerHTML = text2;
-  _PART_INDEX--;
-
-  if(text2 === '') {
-    word2 = random(col4);
-
-    clearInterval(_INTERVAL_VAL);
-
-    if(_PART == (word2.length - 1))
-    _PART = 0;
-    else
-    _PART++;
-
-    _PART_INDEX = 0;
-
-    setTimeout(function() {
-      _INTERVAL_VAL= setInterval(Type2, 100);
-    }, 200);
-  }
-}
+//function Delete2() {
+//  var text2 =  word2.substring(0, _PART_INDEX - 1);
+//  document.getElementsByClassName('y1')[0].innerHTML = text2;
+//  _PART_INDEX--;
+//
+//  if(text2 === '') {
+//    word2 = random(col4);
+//
+//    clearInterval(_INTERVAL_VAL);
+//
+//    if(_PART == (word2.length - 1))
+//    _PART = 0;
+//    else
+//    _PART++;
+//
+//    _PART_INDEX = 0;
+//
+//    setTimeout(function() {
+//      _INTERVAL_VAL= setInterval(Type2, 100);
+//    }, 200);
+//  }
+//}
 
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -143,28 +149,28 @@ function Type3() {
   }
 }
 
-function Delete3() {
-  var text3 =  word3.substring(0, _PART_INDEX_Y - 1);
-  document.getElementsByClassName('z1')[0].innerHTML = text3;
-  _PART_INDEX_Y--;
-
-  if(text3 === '') {
-    word3 = random(col2);
-
-    clearInterval(_INTERVAL_VAL_Y);
-
-    if(_PARTY == (word3.length - 1))
-    _PARTY = 0;
-    else
-    _PARTY++;
-
-    _PART_INDEX_Y = 0;
-
-    setTimeout(function() {
-      _INTERVAL_VAL_Y= setInterval(Type3, 100);
-    }, 200);
-  }
-}
+//function Delete3() {
+//  var text3 =  word3.substring(0, _PART_INDEX_Y - 1);
+//  document.getElementsByClassName('z1')[0].innerHTML = text3;
+//  _PART_INDEX_Y--;
+//
+//  if(text3 === '') {
+//    word3 = random(col2);
+//
+//    clearInterval(_INTERVAL_VAL_Y);
+//
+//    if(_PARTY == (word3.length - 1))
+//    _PARTY = 0;
+//    else
+//    _PARTY++;
+//
+//    _PART_INDEX_Y = 0;
+//
+//    setTimeout(function() {
+//      _INTERVAL_VAL_Y= setInterval(Type3, 100);
+//    }, 200);
+//  }
+//}
 _INTERVAL_VAL_X = setInterval(Type1, 100);
 _INTERVAL_VAL_Y = setInterval(Type3, 100);
 _INTERVAL_VAL= setInterval(Type2, 100);
