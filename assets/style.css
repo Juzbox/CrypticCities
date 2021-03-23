@@ -11,6 +11,7 @@ src: url("MONOSB.TTF") format("truetype");
 
 html, body {
 	 height: 100%; 
+    background-color: white
 }
 
 .x0, .y0, .z0 {
@@ -30,7 +31,7 @@ html, body {
 	width: 60%;
 	transform: translate(-50%, -50%);
 	font-family: monosb;
-	font-size: 30px;
+	font-size: 2.5vh;
 
 }
 
@@ -55,19 +56,19 @@ html, body {
 
 a.button:link{
     color:black;
-    font-size: 14px;
+    font-size: 1.5vh;
     background-color: aquamarine;
 }
 
 a.button:hover{
     color:black;
-    font-size: 14px;
+    font-size: 1.5vh;
     background-color: transparent;
 }
 
 a.button:active{
     color:black;
-    font-size: 10px;
+    font-size: 1vh;
     background-color: transparent;
 }
 
