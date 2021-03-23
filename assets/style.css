@@ -11,7 +11,7 @@ src: url("MONOSB.TTF") format("truetype");
 
 html, body {
 	 height: 100%; 
-    background-color: white
+    background-color: white;
 }
 
 .x0, .y0, .z0 {
