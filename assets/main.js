@@ -45,6 +45,7 @@ function setup() {
 }
 
 function draw() {
+    
   s = second();
 }
 
