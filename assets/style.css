@@ -11,7 +11,7 @@ src: url("MONOSB.TTF") format("truetype");
 
 html, body {
 	 height: 100%; 
-
+  background-color: white;
 }
 
 .x0, .y0, .z0 {
@@ -26,6 +26,7 @@ html, body {
 
 .bodycopy {
 	/*transition: transform 0.9s cubic-bezier(.50, .08, 0, .99);*/
+    background-color: white;
     text-align: center;
 	position: absolute;
 	top: 50%;
